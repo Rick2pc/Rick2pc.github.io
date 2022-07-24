@@ -463,7 +463,7 @@ LinkedList\,(dynamic: never\, become\, full.)
 <p>-<img src="https://img-blog.csdnimg.cn/66baeb86a129467fbcc6294a1fd92b75.bmp?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_ZnJvbSBSaWNrMnBj,size_12,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
 <ul>
 <li><p>Example:</p>
-<p>$f(n)=log<em>{2}(n!) \,and \,g(n)=nlog</em>{2}n$;</p>
+<p>$f(n)=log_{2}(n!) \,and \,g(n)=nlog_{2}n$;</p>
 </li>
 </ul>
 </li>
@@ -510,7 +510,7 @@ LinkedList\,(dynamic: never\, become\, full.)
 <p>​                                                                 $T(N) = T(N − 1) + T(N − 2) + 2$        </p>
 <p>​          Since $fib(n) = fib(n-1) + fib(n-2)$, it is easy to show by induction that T(N) ≥ fib(n). In Section 1.2.5, we showed that fib(N) &lt; (5/3)N. A similar calculation shows that (for N &gt; 4) $fib(N) ≥ (3/2)N$, and so the running time of this program grows exponentially. This is about as bad as possible. By keeping a simple array and using a for loop, the running time can be reduced substantially. </p>
 <h3 id="4-4-Cases-study-The-Maximum-Subsequence-Sum-Problem"><a href="#4-4-Cases-study-The-Maximum-Subsequence-Sum-Problem" class="headerlink" title="4.4 Cases study:  The Maximum Subsequence Sum Problem."></a>4.4 Cases study:  The Maximum Subsequence Sum Problem.</h3><h4 id="4-4-1-The-maximum-subsequence-sum-problem"><a href="#4-4-1-The-maximum-subsequence-sum-problem" class="headerlink" title="4.4.1 The maximum subsequence sum problem"></a>4.4.1 The maximum subsequence sum problem</h4><ul>
-<li>Given(possible negative) integers $A<em>1,A_2,…,A_n$ find the maximum value of $\sum</em>{k=i}^{j}A_k$.<ul>
+<li>Given(possible negative) integers $A_1,A_2,…,A_n$ find the maximum value of $\sum_{k=i}^{j}A_k$.<ul>
 <li>For convenience, the maximum subsequence sum is 0  if all the integers are negative.</li>
 </ul>
 </li>
@@ -519,7 +519,7 @@ LinkedList\,(dynamic: never\, become\, full.)
 <h6 id="1-2-Algorithm-analysis"><a href="#1-2-Algorithm-analysis" class="headerlink" title="1.2  Algorithm analysis"></a>1.2  Algorithm analysis</h6><ol>
 <li><p>The Time Complexity</p>
 <p>The most important part of the code if the third for loop if we can calculate the time of it spend, than we can get the time complexity of the whole function.</p>
-<p>So there may be a roughly sum of the time that the code go through:==$\sum<em>{i=0}^{N-1}\sum</em>{j=i}^{N-1}\sum_{k=i}^{j}1$==, where N represent the size of the problem.</p>
+<p>So there may be a roughly sum of the time that the code go through:==$\sum_{i=0}^{N-1}\sum_{j=i}^{N-1}\sum_{k=i}^{j}1$==, where N represent the size of the problem.</p>
 <p>​    -First :   $\sum_{k=i}^{j}1=j-i+1;$</p>
 <p>​    -Second: $\sum_{j=i}^{N-1}(j-i+1)=(N-i+1)(N-i)/2;$</p>
 <p>​    -Third: $\sum_{i=0}^{N-1}(N-i+1)(N-i)/2=(N^3+3N^2+2N)/6$</p>
@@ -669,7 +669,7 @@ T(N)=NlogN+N\\</script><p>So that $T(N)=O(NlogN)$.</p>
 <li><p><strong><em>Worst-Case Analysis</em></strong></p>
 <p>The pivot is the smallest element, all the time. Then i = 0, and if we ignore T(0) = 1, which is insignificant, the recurrence is </p>
 <p>$T(N) = T(N − 1) + cN, N &gt; 1 $;</p>
-<p>$ T(N − 1) = T(N − 2) + c(N − 1) \ T(N − 2) = T(N − 3) + c(N − 2) \…\ T(2) = T(1) + c(2) ;$</p>
+<p>$ T(N − 1) = T(N − 2) + c(N − 1) \\ T(N − 2) = T(N − 3) + c(N − 2) \...\\ T(2) = T(1) + c(2) ;$</p>
 <p> Adding up all these equations yields :</p>
 <p>$T(N)=T(1)+c\sum_{i=2}^{N}i=\Theta(N^2)$;</p>
 <p> as claimed earlier. To see that this is the worst possible case, note that the total cost of all the partitions in recursive calls at depth d must be at most N. Since the recursion depth is at most N, this gives an ==$O(N^2)$ worst-case== bound for quicksort. </p>
@@ -748,7 +748,7 @@ T(N)=NlogN+N\\</script><p>So that $T(N)=O(NlogN)$.</p>
 </ul>
 </li>
 <li>==Path==<ul>
-<li>A path form $n<em>1 \,to \,n_k$ is defined as a sequence of nodes $n_1,n_2…,n_k$ such that$n_i$ is the parent of $n</em>{i+1}$ for $1\leq i&lt;k$.</li>
+<li>A path form $n_1 \,to \,n_k$ is defined as a sequence of nodes $n_1,n_2…,n_k$ such that$n_i$ is the parent of $n_{i+1}$ for $1\leq i&lt;k$.</li>
 </ul>
 </li>
 <li>==Length== of a path<ul>
@@ -779,19 +779,19 @@ T(N)=NlogN+N\\</script><p>So that $T(N)=O(NlogN)$.</p>
 <h4 id="1-Preorder-Traversal-先序遍历"><a href="#1-Preorder-Traversal-先序遍历" class="headerlink" title="1. Preorder Traversal(先序遍历)"></a>1. Preorder Traversal(先序遍历)</h4><p>==Expression order: $node\,\rightarrow\,left\rightarrow\,right$;==</p>
 <p>Prefix expression（前缀记法）: $++a<em>bc</em>+*defg$</p>
 <p>Pseudo Code:</p>
-<p>$Algorithm\,Preorder(x)\Input:\,x\,is\,the \,root\,of\,a\,subtree\1. if\,x\neq\,NULL\2.then\,output \,key(x);\3.Preorder(left(x));\4.Preorder(right(x));$</p>
+<p>$Algorithm\,Preorder(x)\\Input:\,x\,is\,the \,root\,of\,a\,subtree\\1. if\,x\neq\,NULL\\2.then\,output \,key(x);\\3.Preorder(left(x));\\4.Preorder(right(x));$</p>
 <p>Time Complexity: $O(n)$;</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">Tree::PreTraversal</span><span class="params">(TreeNode* root)</span></span>&#123;</span><br><span class="line">    <span class="comment">//Fill the code here.</span></span><br><span class="line">    <span class="keyword">if</span> (root != <span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; <span class="built_in">char</span>(root-&gt;data) &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">        <span class="built_in">PreTraversal</span>(root-&gt;left);</span><br><span class="line">        <span class="built_in">PreTraversal</span>(root-&gt;right);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="2-Postorder-Traversal-后序遍历"><a href="#2-Postorder-Traversal-后序遍历" class="headerlink" title="2. Postorder Traversal(后序遍历)"></a>2. Postorder Traversal(后序遍历)</h4><p>==Expression order: $left\,\rightarrow\,right\rightarrow\,node$;==</p>
 <p>Postfix expression(后缀记法):$abc<em>+de</em>f+g*+$</p>
 <p>Pseudo Code:</p>
-<p>$Algorithm\,Postorder(x)\Input:\,x\,is\,the \,root\,of\,a\,subtree\1. if\,x\neq\,NULL\2.then\,Postorder(left(x));\3.Postorder(right(x));\4.output \,key(x);$</p>
+<p>$Algorithm\,Postorder(x)\\Input:\,x\,is\,the \,root\,of\,a\,subtree\\1. if\,x\neq\,NULL\\2.then\,Postorder(left(x));\\3.Postorder(right(x));\\4.output \,key(x);$</p>
 <p>Time Complexity: $O(n)$;</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">Tree::PostTraversal</span><span class="params">(TreeNode* root)</span></span>&#123;</span><br><span class="line">    <span class="comment">//Fill the code here.</span></span><br><span class="line">    <span class="keyword">if</span> (root != <span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">PostTraversal</span>(root-&gt;left);</span><br><span class="line">        <span class="built_in">PostTraversal</span>(root-&gt;right);</span><br><span class="line">        cout &lt;&lt; <span class="built_in">char</span>(root-&gt;data) &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="3-Inorder-Traversal-中序遍历"><a href="#3-Inorder-Traversal-中序遍历" class="headerlink" title="3. Inorder Traversal(中序遍历)"></a>3. Inorder Traversal(中序遍历)</h4><p>==Expression order: $left\,\rightarrow\,node\rightarrow\,right$;==</p>
 <p>Infix expression(中序记法): $a+b<em>c+d</em>e+f*g$;</p>
 <p>Pseudo Code:</p>
-<p>$Algorithm\,Inorder(x)\Input:\,x\,is\,the \,root\,of\,a\,subtree\1. if\,x\neq\,NULL\2.then\,Inorder(left(x));\3.output \,key(x);\4.Postorder(right(x));$</p>
+<p>$Algorithm\,Inorder(x)\\Input:\,x\,is\,the \,root\,of\,a\,subtree\\1. if\,x\neq\,NULL\\2.then\,Inorder(left(x));\\3.output \,key(x);\\4.Postorder(right(x));$</p>
 <p>Time Complexity: $O(n)$;</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">Tree::InTraversal</span><span class="params">(TreeNode* root)</span></span>&#123;</span><br><span class="line">    <span class="comment">//Fill the code here.</span></span><br><span class="line">    <span class="keyword">if</span> (root != <span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">InTraversal</span>(root-&gt;left);</span><br><span class="line">        cout &lt;&lt; <span class="built_in">char</span>(root-&gt;data) &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">        <span class="built_in">InTraversal</span>(root-&gt;right);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="6-1-Binary-Tree"><a href="#6-1-Binary-Tree" class="headerlink" title="6.1 Binary Tree"></a>6.1 Binary Tree</h3><p> A binary tree is a tree in which ==no node can have more than two children==.</p>
@@ -873,8 +873,8 @@ T(N)=NlogN+N\\</script><p>So that $T(N)=O(NlogN)$.</p>
 </li>
 <li><p>Base: $N_0=0\,,\,N_1=2$</p>
 </li>
-<li><p>Recursive relation: $N<em>h=N</em>{h-1}+N_{h-2}+1$ </p>
-<p>$&gt;2N<em>{h-2}&gt;4N</em>{h-4}&gt;…&gt;2^iN_{h-2i}$</p>
+<li><p>Recursive relation: $N_h=N_{h-1}+N_{h-2}+1$ </p>
+<p>$&gt;2N_{h-2}&gt;4N_{h-4}&gt;…&gt;2^iN_{h-2i}$</p>
 </li>
 </ul>
 <p><img src="https://img-blog.csdnimg.cn/f7c33eb045964cb28d8dbd046a11cb59.png#pic_center" alt="在这里插入图片描述"></p>
@@ -1026,9 +1026,9 @@ T(N)=NlogN+N\\</script><p>So that $T(N)=O(NlogN)$.</p>
 <li>Let x be the input search key;</li>
 <li>Start the searching at the root;</li>
 <li>If we encounter an internal node v, search (linear search  or binary search) for x among the keys stored at v;<ul>
-<li>If $x &lt; K<em>{min}$ at v, follow the left child pointer of $K</em>{min}$;</li>
-<li>If $K<em>i ≤ x &lt; K</em>{i+1}$ for two consecutive keys $K<em>i$ and $K</em>{i+1}$ at $v$, follow  the left child pointer of $K_{i+1}$;</li>
-<li>If $x ≥ K<em>{max}$ at $v$, follow the right child pointer of $K</em>{max}$</li>
+<li>If $x &lt; K_{min}$ at v, follow the left child pointer of $K_{min}$;</li>
+<li>If $K_i ≤ x &lt; K_{i+1}$ for two consecutive keys $K_i$ and $K_{i+1}$ at $v$, follow  the left child pointer of $K_{i+1}$;</li>
+<li>If $x ≥ K_{max}$ at $v$, follow the right child pointer of $K_{max}$</li>
 </ul>
 </li>
 <li>If we encounter a leaf v, we search (linear search or  binary search) for x among the keys stored at v. If found,  we return the entire record; otherwise, report not found.</li>
